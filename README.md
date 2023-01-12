@@ -10,8 +10,4 @@ Deploy WeKan with CI/CD on Elestio
 
 # Once deployed ...
 
-You can can open WeKan UI here:
-
-    URL: https://[CI_CD_DOMAIN]
-    email:[ADMIN_EMAIL]
-    password: [ADMIN_PASSWORD]
+    For your first connection, you must register in order to have admin status.

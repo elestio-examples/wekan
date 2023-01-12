@@ -8,10 +8,6 @@ ports:
     path: "/"
     isAuth: false
 environments:
-  - key: "ADMIN_PASSWORD"
-    value: "random_password"
-  - key: "ADMIN_EMAIL"
-    value: "[EMAIL]"
   - key: "EMAIL_URL"
     value: "smtp://172.17.0.1:25/?ignoreTLS=true&tls={rejectUnauthorized:false}"
   - key: "EMAIL_FROM"
@@ -38,6 +34,3 @@ lifeCycleConfig:
   postDeployCommand: "./scripts/postDeploy.sh"
 webUI:
   - url: "https://[CI_CD_DOMAIN]"
-    label: "WeKan Admin"
-    login: "[ADMIN_EMAIL]"
-    password: "[ADMIN_PASSWORD]"

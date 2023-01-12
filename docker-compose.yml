@@ -10,8 +10,6 @@ services:
       - ./wekan-db-dump:/dump
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
-
-
   wekan:
     image: quay.io/wekan/wekan
     restart: always
