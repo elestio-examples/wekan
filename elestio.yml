@@ -13,7 +13,7 @@ environments:
   - key: "ADMIN_EMAIL"
     value: "[EMAIL]"
   - key: "EMAIL_URL"
-    value: "smtp://[DOMAIN]@vm.elestio.app:25/?ignoreTLS=true&tls={rejectUnauthorized:false}"
+    value: "smtp://172.17.0.1:25/?ignoreTLS=true&tls={rejectUnauthorized:false}"
   - key: "EMAIL_FROM"
     value: "[DOMAIN]@vm.elestio.app"
   - key: "BASE_URL"
@@ -38,6 +38,6 @@ lifeCycleConfig:
   postDeployCommand: "./scripts/postDeploy.sh"
 webUI:
   - url: "https://[CI_CD_DOMAIN]"
-    label: "Mealie Admin"
+    label: "WeKan Admin"
     login: "[ADMIN_EMAIL]"
     password: "[ADMIN_PASSWORD]"

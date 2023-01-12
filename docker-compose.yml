@@ -8,8 +8,8 @@ services:
     volumes:
       - ./wekan-db:/data/db
       - ./wekan-db-dump:/dump
-      # - /etc/localtime:/etc/localtime:ro
-      # - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
 
 
   wekan:
@@ -26,6 +26,6 @@ services:
       - WRITABLE_PATH=/data
     volumes:
       - ./wekan_data:/data
-      # - /etc/localtime:/etc/localtime:ro
+      - /etc/localtime:/etc/localtime:ro
     depends_on:
       - wekandb
