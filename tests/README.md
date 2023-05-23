@@ -79,12 +79,12 @@ Here are some example snippets to help you get started creating a container.
 
 ### Environment variables
 
-|       Variable        |       Value (example)                                         |
-| :------------------:  | :-------------------------:                                   |
-|     EMAIL_URL         | smtp://xxxxxxxx/?ignoreTLS=true&tls={rejectUnauthorized:false}|
-|    EMAIL_FROM         |        [DOMAIN]@vm.elestio.app                                |
-|     BASE_URL          |           https://[CI_CD_DOMAIN]                              |
-| SOFTWARE_VERSION_TAG  |     latest                                                    |
+|       Variable       |                        Value (example)                         |
+| :------------------: | :------------------------------------------------------------: |
+|      EMAIL_URL       | smtp://xxxxxxxx/?ignoreTLS=true&tls={rejectUnauthorized:false} |
+|      EMAIL_FROM      |                      admin@vm.elestio.app                      |
+|       BASE_URL       |                      https://your.domain                       |
+| SOFTWARE_VERSION_TAG |                             latest                             |
 
 # Maintenance
 
