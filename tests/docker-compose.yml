@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  wekandb:
+    restart: always
+    image: mongo:5
+    command: mongod --logpath /dev/null --oplogSize 128 --quiet
+    volumes:
+      - ./wekan-db:/data/db
+      - ./wekan-db-dump:/dump
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+  wekan:
+    image: elestio4test/wekan:latest
+    restart: always
+    ports:
+      - 172.17.0.1:7972:8080
+    environment:
+      - MONGO_URL=mongodb://wekandb:27017/wekan
+      - ROOT_URL=${BASE_URL}
+      - MAIL_URL=${EMAIL_URL}
+      - MAIL_FROM=${EMAIL_FROM}
+      - WITH_API=true
+      - WRITABLE_PATH=/data
+    volumes:
+      - ./wekan_data:/data
+      - /etc/localtime:/etc/localtime:ro
+    depends_on:
+      - wekandb
