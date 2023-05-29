@@ -6,4 +6,4 @@ mkdir -p ./wekan_data
 chown -R 999:999 ./wekan_data
 
 docker-compose up -d;
-sleep 30s;
+sleep 45s;
