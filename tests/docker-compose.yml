@@ -23,7 +23,7 @@ services:
       - WITH_API=true
       - WRITABLE_PATH=/data
     volumes:
-      - ./wekan_data:/data
+      # - ./wekan_data:/data
       - /etc/localtime:/etc/localtime:ro
     depends_on:
       - wekandb
